@@ -47,7 +47,11 @@ jobs:
           echo
           env | grep "myEnv_"
           echo
-          echo first permission name: $myEnv_0_name
-          echo first permission permissions: $myEnv_0_permission
-          echo second permission name: $myEnv_1_name
-          echo second permission permissions: $myEnv_1_permission
+          for i in 0 1
+          do
+            name=myEnv_$i_name
+            permission=myEnv_$i_permission
+            echo first permission name: $(eval "echo \${$(eval \"echo \${$name}\")}")
+            echo first permission permissions: $(eval "echo \${$(eval \"echo \${$permission}\")}")
+
+          done
