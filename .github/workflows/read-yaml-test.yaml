@@ -52,7 +52,7 @@ jobs:
           do
             name="myEnv_${i}_name"
             permission="myEnv_${i}_permission"
-            echo first permission name: $(eval "echo \${$(eval "echo \${$name}")}")
-            echo first permission permissions: $(eval "echo \${$(eval "echo \${$permission}")}")
+            echo first permission name: $(echo \${$(eval "echo \${$name}")})
+            echo first permission permissions: $(echo \${$(eval "echo \${$permission}")})
 
           done
