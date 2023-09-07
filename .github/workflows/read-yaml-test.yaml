@@ -47,7 +47,6 @@ jobs:
           echo
           env | grep "myEnv_"
           echo
-          set -x
           for i in 0 1
           do
             name="myEnv_${i}_name"
