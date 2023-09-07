@@ -50,8 +50,8 @@ jobs:
           set -x
           for i in 0 1
           do
-            name=myEnv_$i_name
-            permission=myEnv_$i_permission
+            name="myEnv_$i_name"
+            permission="myEnv_$i_permission"
             echo first permission name: $(eval "echo \${$(eval "echo \${$name}")}")
             echo first permission permissions: $(eval "echo \${$(eval "echo \${$permission}")}")
 
